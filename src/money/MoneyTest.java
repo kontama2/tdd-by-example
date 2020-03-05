@@ -8,10 +8,8 @@ public class MoneyTest {
     @Test
     public void testMultiplication() {
         Dollar five = new Dollar(5);
-        Dollar product = five.times(2);
-        assertEquals(10, product.amount);
-        product = five.times(3);
-        assertEquals(15, product.amount);
+        assertEquals(new Dollar(10), five.times(2));
+        assertEquals(new Dollar(15), five.times(3));
     }
 
     @Test
@@ -20,3 +18,9 @@ public class MoneyTest {
         assertFalse(new Dollar(5).equals(new Dollar(6)));
     }
 }
+
+/**
+ * Question:
+ * 1. I think I should run unit test after refactoring.
+ * And TDD Rhythem should contains this step ?
+ */
